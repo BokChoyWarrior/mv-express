@@ -5,9 +5,9 @@ const cookieParser = require("cookie-parser");
 const logger = require("morgan");
 const nunjucks = require("nunjucks");
 
+// Routers
 const indexRouter = require("./routes/index");
 const secretRouter = require("./routes/secret");
-
 const apiRouter = require("./routes/api");
 
 const app = express();
@@ -26,9 +26,9 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 
+// Routes
 app.use("/", indexRouter);
 app.use("/secret", secretRouter);
-
 app.use("/api", apiRouter);
 
 // catch 404 and forward to error handler
