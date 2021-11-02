@@ -9,9 +9,53 @@ router
   .route("/")
 
   .get(async (req, res) => {
-    const menu = await Menu.findAll();
+    let {
+      sort = "id",
+      order = "asc",
+      limit = -1,
+      restaurant_id = -1,
+    } = req.query;
 
-    res.json(menu);
+    let menus;
+    let success = true;
+    try {
+      restaurant_id = parseInt(restaurant_id);
+      let restaurantQuery = {};
+      if (restaurant_id > -1) {
+        restaurantQuery = { restaurant_id: restaurant_id };
+      }
+
+      menus = await Menu.findAll({
+        order: [[sort, order]],
+        limit: limit,
+        where: restaurantQuery,
+      });
+    } catch (e) {
+      console.log(e);
+      respond404(req, res, "Please check queries");
+      success = false;
+    }
+    // only runs if there was no error
+    if (success) {
+      res.json(menus);
+    }
+  })
+
+  .post(async (req, res) => {
+    try {
+      const { title, restaurant_id } = req.body;
+
+      const restaurant = await Restaurant.findByPk(restaurant_id);
+      let menu;
+      if (!!restaurant) {
+        menu = await restaurant.createMenu({ title });
+      } else {
+        throw new Error(`Restaurant with ID: ${restaurant_id} doesn't exist`);
+      }
+      res.status(201).json(menu);
+    } catch (e) {
+      res.status(500).json({ message: e.message });
+    }
   });
 
 // Main CRUD route

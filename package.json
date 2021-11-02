@@ -15,7 +15,8 @@
     "morgan": "~1.9.1",
     "nunjucks": "^3.2.3",
     "sequelize": "^6.8.0",
-    "sqlite3": "^5.0.2"
+    "sqlite3": "^5.0.2",
+    "validatorjs": "^3.22.1"
   },
   "devDependencies": {
     "nodemon": "^2.0.14"

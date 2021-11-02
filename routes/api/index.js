@@ -7,9 +7,12 @@ const apicache = require("apicache");
 const onlyGetRequests = (req, res) => req.method === "GET";
 router.use(apicache.middleware("1 minute", onlyGetRequests));
 
-router.use("/restaurants", require("./restaurants"));
-router.use("/menus", require("./menus"));
-router.use("/menuItems", require("./menuItems"));
+const restaurantsRouter = require("./restaurants");
+const menusRouter = require("./menus");
+const menuItemsRouter = require("./menuItems");
+router.use("/restaurants", restaurantsRouter);
+router.use("/menus", menusRouter);
+router.use("/menuItems", menuItemsRouter);
 
 // Caching health
 // add route to display cache index

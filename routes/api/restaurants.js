@@ -9,9 +9,24 @@ router
   .route("/")
 
   .get(async (req, res) => {
-    const restaurants = await Restaurant.findAll();
+    const { sort = "id", order = "asc", limit = -1 } = req.query;
 
-    res.json(restaurants);
+    let restaurants;
+    let success = true;
+    try {
+      restaurants = await Restaurant.findAll({
+        order: [[sort, order]],
+        limit: limit,
+      });
+    } catch (e) {
+      console.log(e);
+      respond404(req, res, "Please check queries");
+      success = false;
+    }
+    // only runs if there was no error
+    if (success) {
+      res.json(restaurants);
+    }
   })
 
   .post(async (req, res) => {
@@ -31,7 +46,9 @@ router
   .route("/:id")
 
   .get(async (req, res) => {
-    const restaurant = await Restaurant.findByPk(req.params.id);
+    const restaurant = await Restaurant.findByPk(req.params.id, {
+      include: "menus",
+    });
 
     if (restaurant) {
       res.json(restaurant);

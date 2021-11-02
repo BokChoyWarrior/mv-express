@@ -9,24 +9,55 @@ router
   .route("/")
 
   .get(async (req, res) => {
-    const menu = await MenuItem.findAll();
+    let { sort = "id", order = "asc", limit = -1, menu_id = -1 } = req.query;
 
-    res.json(menu);
+    let menuItems;
+    let success = true;
+    try {
+      let menuQuery = {};
+      menu_id = parseInt(menu_id);
+      console.log(typeof menu_id);
+      if (menu_id > -1) {
+        menuQuery = { menu_id: menu_id };
+      }
+
+      menuItems = await MenuItem.findAll({
+        order: [[sort, order]],
+        limit: limit,
+        where: menuQuery,
+      });
+    } catch (e) {
+      console.log(e);
+      respond404(req, res, "Please check queries");
+      success = false;
+    }
+    // only runs if there was no error
+    if (success) {
+      res.json(menuItems);
+    }
+  })
+
+  .post(async (req, res) => {
+    try {
+      const { name, price, menu_id } = req.body;
+
+      const menu = await Menu.findByPk(menu_id);
+      let menuItem;
+      if (!!menu) {
+        menuItem = await menu.createMenuItem({ name, price });
+      } else {
+        throw new Error(`Restaurant with ID: ${menu_id} doesn't exist`);
+      }
+      res.status(201).json(menuItem);
+    } catch (e) {
+      res.status(500).json({ message: e.message });
+    }
   });
 
 // Main CRUD route
 router
   .route("/:id")
 
-  .get(async (req, res) => {
-    const menuItem = await MenuItem.findByPk(req.params.id);
-
-    if (menuItem) {
-      res.json(menuItem);
-    } else {
-      respond404(req, res);
-    }
-  })
   .get(async (req, res) => {
     const menuItem = await MenuItem.findByPk(req.params.id);
 
