@@ -7,6 +7,11 @@ const apicache = require("apicache");
 const onlyGetRequests = (req, res) => req.method === "GET";
 router.use(apicache.middleware("1 minute", onlyGetRequests));
 
+router.use((req, res, next) => {
+  res.header("Access-Control-Allow-Origin", "*");
+  next();
+});
+
 const restaurantsRouter = require("./restaurants");
 const menusRouter = require("./menus");
 const menuItemsRouter = require("./menuItems");
