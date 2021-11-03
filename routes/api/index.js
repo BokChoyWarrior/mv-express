@@ -5,10 +5,11 @@ const apicache = require("apicache");
 
 // We only want to cache api requests that are GET
 const onlyGetRequests = (req, res) => req.method === "GET";
-router.use(apicache.middleware("1 minute", onlyGetRequests));
+router.use(apicache.middleware("5 seconds", onlyGetRequests));
 
 router.use((req, res, next) => {
   res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Methods", "GET,PUT,POST,DELETE");
   next();
 });
 
