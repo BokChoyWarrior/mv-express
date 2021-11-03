@@ -1,0 +1,21 @@
+_id: req_60b25685cad04d76b6accbff2bd88e2d
+type: Request
+parentId: fld_6f78fb2e4f2c42b699081df835daa8e7
+modified: 1635504385558
+created: 1635502394398
+url: "{{ _.base_url }}/cache/index"
+name: index
+description: ""
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication: {}
+metaSortKey: -1635502401169
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

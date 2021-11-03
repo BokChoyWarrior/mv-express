@@ -1,0 +1,38 @@
+_id: req_4c766966abc942bd86a7f71aade5bd79
+type: Request
+parentId: fld_a3dbef971eb8481d9176d130927a6f06
+modified: 1635776357226
+created: 1635766861829
+url: "{{ _.base_url }}/restaurants?sort=id&ord=desc"
+name: all restaurants
+description: ""
+method: GET
+body: {}
+parameters:
+  - id: pair_3c312793d5174af6b6d40779d876d7bd
+    name: ""
+    value: ""
+    description: ""
+  - id: pair_80dcf8c78a7242af936f390a859f1ec9
+    name: ""
+    value: ""
+    description: ""
+  - id: pair_9c7cb6938c074e50a52808fe15fae8f4
+    name: ""
+    value: ""
+    description: ""
+headers:
+  - id: pair_ac64ad832c264c30a3e3f60b68be17b0
+    name: x-apicache-bypass
+    value: "true"
+    description: ""
+    disabled: true
+authentication: {}
+metaSortKey: -1635501183417
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

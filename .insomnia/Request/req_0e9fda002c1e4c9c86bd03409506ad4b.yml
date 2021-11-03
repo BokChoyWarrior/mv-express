@@ -1,0 +1,29 @@
+_id: req_0e9fda002c1e4c9c86bd03409506ad4b
+type: Request
+parentId: fld_a3dbef971eb8481d9176d130927a6f06
+modified: 1635947026528
+created: 1635501183271
+url: "{{ _.base_url }}/restaurants"
+name: post restaurant
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"name": "Another restaurant"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_dad762aabbbc43678ab54dcb2a800bef
+authentication: {}
+metaSortKey: -1635501183317
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

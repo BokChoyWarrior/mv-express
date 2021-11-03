@@ -1,0 +1,26 @@
+_id: req_7c9edc10ef604818864274f485013804
+type: Request
+parentId: fld_0154b7d816024224ad40a021350c1750
+modified: 1635506868531
+created: 1635506852511
+url: "{{ _.base_url }}/menuItems/17"
+name: delete menu item
+description: ""
+method: DELETE
+body:
+  mimeType: application/json
+  text: ""
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_dad762aabbbc43678ab54dcb2a800bef
+authentication: {}
+metaSortKey: -1635499673995.0625
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

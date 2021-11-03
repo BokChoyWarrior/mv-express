@@ -1,0 +1,21 @@
+_id: req_ae46780b199e46c080ec04170c34c04f
+type: Request
+parentId: fld_9a1520c5d8d143b08181aaadd6ddf0a3
+modified: 1635503322729
+created: 1635502796870
+url: "{{ _.base_url }}/menus/1"
+name: exist menu
+description: ""
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication: {}
+metaSortKey: -1635499859913.5
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

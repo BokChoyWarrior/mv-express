@@ -1,0 +1,31 @@
+_id: req_9626ae361f544d61a24ee8506edee14c
+type: Request
+parentId: fld_0154b7d816024224ad40a021350c1750
+modified: 1635767097538
+created: 1635506844871
+url: "{{ _.base_url }}/menuItems"
+name: post menu item
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"name": "Another menu Item",
+    	"price": 5.6,
+    	"menu_id": 1
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_dad762aabbbc43678ab54dcb2a800bef
+authentication: {}
+metaSortKey: -1635499686389.625
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

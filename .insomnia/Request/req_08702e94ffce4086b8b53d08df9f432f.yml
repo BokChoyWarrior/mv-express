@@ -1,0 +1,21 @@
+_id: req_08702e94ffce4086b8b53d08df9f432f
+type: Request
+parentId: fld_a3dbef971eb8481d9176d130927a6f06
+modified: 1635499554666
+created: 1635499484948
+url: "{{ _.base_url }}/restaurants/1/menus"
+name: existing menus
+description: ""
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication: {}
+metaSortKey: -1635498129105
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,0 +1,33 @@
+_id: req_777232df2b44409a9f090d29471e3613
+type: Request
+parentId: fld_0154b7d816024224ad40a021350c1750
+modified: 1635783468287
+created: 1635500556158
+url: "{{ _.base_url }}/menuItems"
+name: menu items
+description: ""
+method: GET
+body: {}
+parameters:
+  - id: pair_3c49e18ea19844b38f84793fccade172
+    name: sort
+    value: price
+    description: ""
+  - id: pair_b0cb26bc62824c8198ff203dca6814fe
+    name: order
+    value: desc
+    description: ""
+  - id: pair_2ba84cfc753548f09370028565e5c5d4
+    name: menu_id
+    value: "3"
+    description: ""
+headers: []
+authentication: {}
+metaSortKey: -1635499959070
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

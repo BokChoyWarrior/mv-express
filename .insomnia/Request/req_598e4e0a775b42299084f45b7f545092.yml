@@ -1,0 +1,30 @@
+_id: req_598e4e0a775b42299084f45b7f545092
+type: Request
+parentId: fld_9a1520c5d8d143b08181aaadd6ddf0a3
+modified: 1635766971967
+created: 1635506815891
+url: "{{ _.base_url }}/menus"
+name: post menu
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"title": "menu1",
+    	"restaurant_id": 14
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_dad762aabbbc43678ab54dcb2a800bef
+authentication: {}
+metaSortKey: -1635499909491.75
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,0 +1,21 @@
+_id: req_f3967c47d3fb4ba8919cac05b7e6bc54
+type: Request
+parentId: fld_6f78fb2e4f2c42b699081df835daa8e7
+modified: 1635502581764
+created: 1635502401119
+url: "{{ _.base_url }}/cache/performance"
+name: performance
+description: ""
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication: {}
+metaSortKey: -1635502401119
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

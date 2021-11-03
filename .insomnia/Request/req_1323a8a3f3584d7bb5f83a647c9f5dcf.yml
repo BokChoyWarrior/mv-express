@@ -1,0 +1,21 @@
+_id: req_1323a8a3f3584d7bb5f83a647c9f5dcf
+type: Request
+parentId: fld_9a1520c5d8d143b08181aaadd6ddf0a3
+modified: 1635500269328
+created: 1635499991760
+url: "{{ _.base_url }}/menus/1/menuItems/0"
+name: menu items
+description: ""
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication: {}
+metaSortKey: -1635499760757
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

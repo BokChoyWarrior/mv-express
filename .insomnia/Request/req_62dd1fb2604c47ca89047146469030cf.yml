@@ -1,0 +1,31 @@
+_id: req_62dd1fb2604c47ca89047146469030cf
+type: Request
+parentId: fld_0154b7d816024224ad40a021350c1750
+modified: 1635506910853
+created: 1635506849614
+url: "{{ _.base_url }}/restaurants/1"
+name: update menu item
+description: ""
+method: PUT
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"name": "Another menu Item",
+    	"price": 5.6,
+    	"menu_id": 1
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_dad762aabbbc43678ab54dcb2a800bef
+authentication: {}
+metaSortKey: -1635499711178.75
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
