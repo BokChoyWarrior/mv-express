@@ -46,9 +46,22 @@ router
   .route("/:id")
 
   .get(async (req, res) => {
-    const restaurant = await Restaurant.findByPk(req.params.id, {
-      include: "menus",
-    });
+    let { getNested = false } = req.query;
+
+    const nestedParams = getNested
+      ? {
+          include: {
+            model: Menu,
+            as: "menus",
+            include: {
+              model: MenuItem,
+              as: "menuItems",
+            },
+          },
+        }
+      : { include: "menus" };
+
+    const restaurant = await Restaurant.findByPk(req.params.id, nestedParams);
 
     if (restaurant) {
       res.json(restaurant);
