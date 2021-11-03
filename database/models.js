@@ -16,7 +16,10 @@ Restaurant.init(
     name: {
       type: DataTypes.STRING,
     },
-    image: DataTypes.STRING,
+    image: {
+      type: DataTypes.STRING,
+      defaultValue: "https://i.imgur.com/VfpU1j0.jpeg",
+    },
   },
   {
     tableName: "restaurants",
