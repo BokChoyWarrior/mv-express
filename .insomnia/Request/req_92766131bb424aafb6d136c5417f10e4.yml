@@ -1,0 +1,30 @@
+_id: req_92766131bb424aafb6d136c5417f10e4
+type: Request
+parentId: fld_a3dbef971eb8481d9176d130927a6f06
+modified: 1635950434761
+created: 1635498129055
+url: "{{ _.base_url }}/restaurants/2"
+name: restaurant
+description: ""
+method: GET
+body: {}
+parameters:
+  - id: pair_d45588753aef41b583fea459847978b1
+    name: getNested
+    value: "true"
+    description: ""
+headers:
+  - id: pair_ac64ad832c264c30a3e3f60b68be17b0
+    name: x-apicache-bypass
+    value: "true"
+    description: ""
+    disabled: false
+authentication: {}
+metaSortKey: -1635501183367
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

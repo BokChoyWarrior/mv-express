@@ -1,0 +1,30 @@
+_id: req_fd1bbc03a32644da8bb9d708dcfcbb5e
+type: Request
+parentId: fld_9a1520c5d8d143b08181aaadd6ddf0a3
+modified: 1635506943346
+created: 1635506822926
+url: "{{ _.base_url }}/menus/1"
+name: update menu
+description: ""
+method: PUT
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"title": "First1fdsafdsafsafsaf",
+    	"restaurant_id": 1
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_dad762aabbbc43678ab54dcb2a800bef
+authentication: {}
+metaSortKey: -1635499884702.625
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

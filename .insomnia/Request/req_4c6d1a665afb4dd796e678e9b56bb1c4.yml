@@ -1,0 +1,26 @@
+_id: req_4c6d1a665afb4dd796e678e9b56bb1c4
+type: Request
+parentId: fld_9a1520c5d8d143b08181aaadd6ddf0a3
+modified: 1635506839227
+created: 1635506826660
+url: "{{ _.base_url }}/restaurants/17"
+name: delete menu
+description: ""
+method: DELETE
+body:
+  mimeType: application/json
+  text: ""
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_dad762aabbbc43678ab54dcb2a800bef
+authentication: {}
+metaSortKey: -1635499872308.0625
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

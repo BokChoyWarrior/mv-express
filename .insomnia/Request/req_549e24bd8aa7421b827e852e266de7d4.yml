@@ -1,0 +1,30 @@
+_id: req_549e24bd8aa7421b827e852e266de7d4
+type: Request
+parentId: fld_a3dbef971eb8481d9176d130927a6f06
+modified: 1635775370941
+created: 1635505974028
+url: "{{ _.base_url }}/restaurants/1"
+name: update restaurant
+description: ""
+method: PUT
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"name": "First1fdsafdsafsafsaf",
+    	"image": "imagelink herefdafsdaf"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_dad762aabbbc43678ab54dcb2a800bef
+authentication: {}
+metaSortKey: -1635500877255.25
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
